@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@600;700&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -24,10 +24,10 @@
             <a href="#" class="logo">Harsh Laddha</a>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#overview">About</a></li>
+                <li><a href="#overview">Skills</a></li>
+                <li><a href="#overview">Experience</a></li>
+                <li><a href="#overview">Contact</a></li>
             </ul>
             <div class="menu-btn"><i class="fas fa-bars"></i></div>
         </div>
@@ -54,69 +54,76 @@
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
+    <!-- UNIFIED OVERVIEW SECTION -->
+    <section id="overview">
         <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <p>I am a Blockchain Developer specializing in smart contract development, cross-chain infrastructure, and DeFi protocols using Solidity and Go. Adept at building EVM-compatible solutions, modular backend architectures, and custom tooling for bridges, rollups, and perpetual trading. Proven expertise in performance optimization, on-chain/off-chain integrations, and internal audits. Passionate about contributing to next-gen Web3 ecosystems.</p>
+            <h2 class="section-title">Why Choose Me?</h2>
+            <div class="overview-grid">
+                
+                <!-- About Me Card -->
+                <div class="grid-card about-card">
+                    <h3>About Me</h3>
+                    <p>A Blockchain Developer specializing in smart contract development, cross-chain infrastructure, and DeFi protocols using Solidity and Go. Adept at building EVM-compatible solutions and modular backend architectures. Passionate about contributing to next-gen Web3 ecosystems.</p>
+                </div>
+                
+                <!-- Experience Card -->
+                <div class="grid-card experience-card">
+                    <h3>Professional Experience</h3>
+                    <div class="job">
+                        <h4><i class="fas fa-briefcase"></i> Senior Blockchain Developer</h4>
+                        <p class="company">Elys Network (Feb 2022 - Present)</p>
+                        <!-- MODIFIED: Expanded summary -->
+                        <p class="summary">Architected Solidity contracts for core DeFi modules (vaults, bridges, perpetuals). Built a Go-based cross-chain relayer, a Gas Tank system for meta-transactions, and designed EIP-712 signature schemes for off-chain trade settlement. Researched and mitigated MEV risks via transaction simulation.</p>
+                    </div>
+                    <div class="job">
+                        <h4><i class="fas fa-briefcase"></i> Blockchain Developer</h4>
+                        <p class="company">Deqode (Jul 2020 - Jan 2022)</p>
+                        <!-- MODIFIED: Expanded summary -->
+                        <p class="summary">Developed modular DeFi systems (vaults, AMMs, NFTs, governance). Integrated contracts with Go-based backends for real-time analytics, built a Go REST API layer for trading frontends, and engineered cross-chain asset tracking flows with Cosmos SDK. Wrote extensive tests simulating flashloan-based exploits.</p>
+                    </div>
+                </div>
+
+                <!-- Core Strengths Card -->
+                <div class="grid-card strengths-card">
+                    <h3>Core Strengths</h3>
+                    <ul>
+                        <li><i class="fas fa-shield-alt"></i> Secure & Scalable Systems</li>
+                        <li><i class="fas fa-network-wired"></i> Cross-Chain Infrastructure</li>
+                        <li><i class="fab fa-ethereum"></i> DeFi Protocol Development</li>
+                        <li><i class="fas fa-cogs"></i> Performance Optimization</li>
+                    </ul>
+                </div>
+
+                <!-- Modern Stack Card -->
+                <div class="grid-card stack-card">
+                    <h3>Modern Stack</h3>
+                    <div class="stack-icons">
+                        <span>Solidity</span>
+                        <span>Go</span>
+                        <span>TypeScript</span>
+                        <span>Rust</span>
+                        <span>Hardhat</span>
+                        <span>Foundry</span>
+                        <span>Cosmos SDK</span>
+                        <span>Docker</span>
+                    </div>
+                </div>
+
+                <!-- Get In Touch Card -->
+                <div class="grid-card contact-card">
+                    <h3>Get In Touch</h3>
+                    <p>Open to discussing new projects and creative opportunities.</p>
+                    <button id="contactBtn" class="btn-outline">Contact Me</button>
+                    <div class="socials">
+                        <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/rustycom" target="_blank"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
-        <div class="container">
-            <h2 class="section-title">My Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-card"><i class="fas fa-code"></i><h3>Programming</h3><p>Solidity, Go, TypeScript, Rust</p></div>
-                <div class="skill-card"><i class="fas fa-cogs"></i><h3>Frameworks & Tools</h3><p>Hardhat, Foundry, OpenZeppelin, Ethers.js, CosmWasm</p></div>
-                <div class="skill-card"><i class="fab fa-ethereum"></i><h3>Blockchain & Protocols</h3><p>Ethereum, OP Stack, Cosmos SDK, Substrate</p></div>
-                <div class="skill-card"><i class="fas fa-network-wired"></i><h3>Infrastructure</h3><p>Cross-chain Bridges, Rollups, Gas Tanks, Indexers</p></div>
-                <div class="skill-card"><i class="fas fa-shield-alt"></i><h3>Security</h3><p>EIP-712, Signature Validation, Commit-reveal, UUPS</p></div>
-                <div class="skill-card"><i class="fas fa-server"></i><h3>Monitoring & CI</h3><p>Docker, GitHub Actions, Prometheus, Grafana</p></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience" class="experience">
-        <div class="container">
-            <h2 class="section-title">Professional Experience</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-date">Feb 2022 - Present</div>
-                    <div class="timeline-content">
-                        <h3>Senior Blockchain Developer - Elys Network</h3>
-                        <p>Architected and maintained Solidity smart contracts for DeFi modules. Built a Go-based cross-chain relayer, a gas-tank system for meta-transactions, and designed EIP-712 signature schemes for off-chain trade submission.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-date">Jul 2020 - Jan 2022</div>
-                    <div class="timeline-content">
-                        <h3>Blockchain Developer - Deqode</h3>
-                        <p>Developed modular DeFi systems (vaults, AMMs, NFTs). Integrated Solidity contracts with Go-based backends, built a Go REST API layer, and engineered cross-chain asset tracking flows with Cosmos SDK.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of an amazing team. Feel free to reach out!</p>
-            <button id="contactBtn" class="btn-outline">Contact Me</button>
-            <div class="socials">
-                <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/rustycom" target="_blank"><i class="fab fa-github"></i></a>
-                <!-- Twitter icon removed -->
-            </div>
-        </div>
-    </section>
 
     <!-- Contact Modal -->
     <div id="contactModal" class="modal">
